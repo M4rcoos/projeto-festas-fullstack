@@ -19,7 +19,7 @@ const serviceSchema = new Schema({
     type: String,
     required: true,
   },
-},{timesTamps: true})
+},{timestamps: true})
 
 const Service = mongoose.model('Service', serviceSchema);
 
