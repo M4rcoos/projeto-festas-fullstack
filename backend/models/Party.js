@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const {Schema} = mongoose;
 
-const {ServiceSchema} =require ('./Service');
+const {serviceSchema} =require ('./Service');
 
 const partySchema = new Schema({
   title:{
@@ -26,10 +26,9 @@ const partySchema = new Schema({
     required: true,
   },
   services:{
-    type: [ServiceSchema],
-    required: true,
+    type: [serviceSchema],
   }
-},{timesTamps: true});
+},{timestamps: true});
 
 const Party = mongoose.model('Party', partySchema);
 
