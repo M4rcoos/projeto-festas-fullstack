@@ -1,5 +1,5 @@
 import React from 'react';
-import * as C from './style'
+import * as C from './HeaderStyles'
 
 export  const Header = () =>{
   return (
