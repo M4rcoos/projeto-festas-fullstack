@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const {schemas} = mongoose;
+const {Schema} = mongoose;
 
 const {ServiceSchema} =require ('./Service');
 
