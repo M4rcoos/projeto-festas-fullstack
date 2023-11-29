@@ -23,7 +23,10 @@ export const CardParty = () => {
    {
     parties.map((party, index) => (
       <C.Card key={index}>
+        <C.DivImg>
+
         <C.Img src={party.image} alt={party.title} />
+        </C.DivImg>
         <C.Footer>
           <C.Title>{party.title}</C.Title>
           <C.Btn>Detalhes</C.Btn>

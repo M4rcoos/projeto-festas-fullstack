@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const Header = styled.header`
 display: flex;
@@ -36,7 +37,7 @@ export const Navigation = styled.ul`
 export const NavItem = styled.li`
 list-style: none;
 `
-export const ListItem = styled.a`
+export const ListItem = styled(Link)`
     text-decoration: none;
     padding: 8px 16px;
     border-radius:8px;
@@ -46,7 +47,7 @@ export const ListItem = styled.a`
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.1rem;
     `
-export const ListItemCreate = styled.a`
+export const ListItemCreate = styled(Link)`
     text-decoration: none;
     padding: 8px 16px;
     border-radius:8px;
