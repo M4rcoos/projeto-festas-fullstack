@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { apiParty } from '../../provider/party';
 import * as C from './CardPartyStyles';
 import search from '../../assets/searchZero.svg'
+import { Title } from '../Title/Title';
 
 interface IParty {
   _id: string;
@@ -25,7 +26,6 @@ export const CardParty = () => {
 
   return (
    <>
-
    {parties.length > 0 ? (
       parties.map((party, index) => (
         <C.Card key={index}>
@@ -42,9 +42,8 @@ export const CardParty = () => {
    ) : <>
      <C.CardNone>
 
-<C.TitleSearch>
-  Crie uma festa ...
-</C.TitleSearch>
+     <Title name='Você ainda não tem festa crie uma...'/>
+ 
 <img src={search} alt={"mulher procurando alguma coisa"} />
 </C.CardNone>
    </>

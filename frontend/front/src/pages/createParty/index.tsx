@@ -4,6 +4,7 @@ import { PartyForm } from '../../components/Form/Form';
 import * as C from './styles'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Title } from '../../components/Title/Title';
 
 
 export const CreateParty = ()=>{
@@ -13,7 +14,8 @@ export const CreateParty = ()=>{
     <div>
       <Header/>
       <C.Section>
-      <h1 style={{textAlign:'center'}}>Crie sua Próxima festa</h1>
+      <Title name='Crie sua próxima festa'/>
+      
 
       <PartyForm/>
       <ToastContainer style={{marginTop:70}} />

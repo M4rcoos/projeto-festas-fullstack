@@ -3,6 +3,7 @@ import { PartyForm } from '../../components/Form/FormUpdate';
 import { ToastContainer } from 'react-toastify';
 
 import * as C from './styles'
+import { Title } from '../../components/Title/Title';
 
 
 export const Details = ()=>{
@@ -10,7 +11,8 @@ export const Details = ()=>{
     <div>
       <Header/>
       <C.Section>
-      <h1 style={{textAlign:'center'}}>Editar festa</h1>
+      <Title name='Editar festa'/>
+     
 
       <PartyForm/>
       <ToastContainer style={{marginTop:70}} />
