@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { apiParty } from "../../provider/party";
+import * as C from './FormStyles'
 
 
 
@@ -12,7 +13,7 @@ interface IParty {
   }
   
   export const PartyForm = () => {
-    const { register, handleSubmit } = useForm<IParty>();
+    const { register, handleSubmit,reset  } = useForm<IParty>();
   
     const onSubmit = (formData: IParty) => {
         apiParty.post('/', formData)
@@ -24,19 +25,19 @@ interface IParty {
           // Aqui você pode lidar com erros, se houver
           console.error('Erro ao enviar dados:', error);
         });
+        reset();
     };
   
-    
     return (
         <>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("author")} placeholder="Nome do anfitrião" />
-        <input {...register("title")} placeholder="nome da festa" />
-        <input {...register("description")} placeholder="Descrição" />
-        <input {...register("budget")} placeholder="Orçamento" />
-        <input {...register("image")} placeholder="Imagem" />
-        <input type="submit" />
-      </form>
+      <C.Form onSubmit={handleSubmit(onSubmit)}>
+        <C.Input {...register("author")} placeholder="Nome do anfitrião" required/>
+        <C.Input {...register("title")} placeholder="nome da festa" required/>
+        <C.Input {...register("description")} placeholder="Descrição" required/>
+        <C.Input {...register("budget")} placeholder="Orçamento" required/>
+        <C.Input {...register("image")} placeholder="Url da imagem" required/>
+        <C.InputSubmit type="submit" />
+      </C.Form>
       </>
 
     );
