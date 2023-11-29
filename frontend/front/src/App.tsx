@@ -1,7 +1,9 @@
 import { Header } from "./components/Header/Header"
-import './index.css'
 import { Home } from "./pages/home"
 
+
+
+import './index.css'
 function App() {
 
 

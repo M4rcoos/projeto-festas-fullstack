@@ -21,9 +21,14 @@ padding: 1rem;
   }
 `
 export const Input = styled.input`
-padding: 5px 8px;
+padding: 15px 8px;
 border-radius: 4px;
 border: 1px solid;
+
+&:focus{
+  outline: none;
+  border: 1px solid #8A2BE2;
+}
 `
 export const InputSubmit = styled.input`
 
