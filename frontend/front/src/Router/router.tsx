@@ -14,7 +14,7 @@ export const Routes = () =>{
         element : <CreateParty/>
     },
     {
-        path : '/atualizar',
+        path : '/atualizar/:_id',
         element : <Details/>
     },
     ]);

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Card = styled.div`
@@ -6,6 +7,9 @@ width: 400px;
 @media (max-width: 430px) {
   width: 300px;
   }
+`
+export const CardNone = styled.div`
+
 `
 export const Img = styled.img`
   width: 100%;
@@ -38,13 +42,21 @@ border-bottom-right-radius: 4px;
 border-bottom-left-radius: 4px;
 `
 
-export const Title = styled.h4`
+export const TitleSearch = styled.h1`
+font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    overflow: hidden;
+    color:#9932cc;
+    text-align: center;
+
+`
+export const Title = styled.h1`
 font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     overflow: hidden;
 
 `
-export const Btn = styled.a`
+export const Btn = styled(Link)`
  text-decoration: none;
     padding: 4px 12px;
     border-radius:4px;

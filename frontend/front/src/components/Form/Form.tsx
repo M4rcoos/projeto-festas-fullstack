@@ -13,23 +13,26 @@ interface IParty {
   image: string;
 }
 
+
+
+
+
 export const PartyForm = () => {
-  const { register, handleSubmit, reset } = useForm<IParty>();
+const { register, handleSubmit, reset } = useForm<IParty>();
 
-  const onSubmit = (formData: IParty) => {
-    apiParty
-      .post('/', formData)
-      .then((response) => {
-        if (response.data && response.data.msg) {
-          toast.success(response.data.msg); 
-        }
-      })
-      .catch(() => {
-        toast.error("Erro ao criar festa"); 
-      });
-    reset();
-  };
-
+const onSubmit = (formData: IParty) => {
+  apiParty
+    .post('/', formData)
+    .then((response) => {
+      if (response.data && response.data.msg) {
+        toast.success(response.data.msg); 
+      }
+    })
+    .catch(() => {
+      toast.error("Erro ao criar festa"); 
+    });
+  reset();
+};
   return (
     <C.Form onSubmit={handleSubmit(onSubmit)}>
       <C.Input {...register('author')} placeholder="Nome do anfitrião" required />
