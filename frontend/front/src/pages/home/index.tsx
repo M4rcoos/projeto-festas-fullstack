@@ -1,4 +1,3 @@
-import React from 'react';
 import {CardParty} from "../../components/CardParty/CardParty"
 import * as C from "./styles"
 import { Header } from "../../components/Header/Header"
