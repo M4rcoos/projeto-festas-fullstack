@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { apiParty } from '../../provider/party';
 import * as C from './CardPartyStyles';
 import search from '../../assets/searchZero.svg'

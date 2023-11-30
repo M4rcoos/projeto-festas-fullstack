@@ -1,5 +1,5 @@
 import * as C from './FormStyles';
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { apiParty } from '../../provider/party';
 import { toast } from 'react-toastify';
@@ -24,7 +24,6 @@ export const PartyForm = () => {
   const navigate = useNavigate();
   const { register, handleSubmit, reset } = useForm<IParty>();
   const { _id } = useParams<{ _id: string }>(); 
-  const [formData, setFormData] = useState<IParty | null>(null)
 
   useEffect(() => {
     if (_id) {

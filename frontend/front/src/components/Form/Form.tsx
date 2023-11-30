@@ -1,5 +1,4 @@
 import * as C from './FormStyles';
-import React from 'react';
 import { useForm } from 'react-hook-form';
 import { apiParty } from '../../provider/party';
 import { toast } from 'react-toastify';

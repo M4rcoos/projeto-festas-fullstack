@@ -1,6 +1,4 @@
-import React from 'react';
 import * as C from './HeaderStyles'
-import { Link } from 'react-router-dom';
 
 export  const Header = () =>{
   return (
