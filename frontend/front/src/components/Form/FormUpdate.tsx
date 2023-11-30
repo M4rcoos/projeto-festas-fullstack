@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert';
+import { MdDeleteOutline } from "react-icons/md";
 import 'react-confirm-alert/src/react-confirm-alert.css';
 
 interface IParty {
@@ -91,7 +92,6 @@ export const PartyForm = () => {
 
   return (
     <>
-      <C.InputDelet onClick={onDelete}>Excluir</C.InputDelet>
 
     <C.Form onSubmit={handleSubmit(onSubmit)}>
       <C.Input {...register('author')} placeholder="Nome do anfitrião" required />
@@ -100,6 +100,10 @@ export const PartyForm = () => {
       <C.Input {...register('budget')} placeholder="Orçamento" required />
       <C.Input {...register('image')} placeholder="URL da imagem" required />
       <C.InputSubmit type="submit" />
+      <div style={{display:'flex', alignItems:'center', justifyContent:'center'}}>
+
+    <MdDeleteOutline onClick={onDelete} fill='#ff2222'  size="30px"/>
+      </div>
     </C.Form>
     </>
   );
